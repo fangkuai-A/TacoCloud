@@ -54,7 +54,6 @@ public class DesignController {
     @PostMapping
     public String processTaco(Taco taco){
         // save the taco
-        taco.setCreatedAt(new Date());
         tacoService.addTaco(taco);
         log.info("Process taco: " + taco);
         log.info("taco.id = " + taco.getId());
